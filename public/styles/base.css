@@ -1,0 +1,102 @@
+:root{
+    --primary-color-text:#000000;
+    --secondary-color-bg:#F4F4F5;
+    --font-family: "Poetsen One", sans-serif;
+    --font-family-index: "Bungee Shade", sans-serif;
+    --Nutral:#404040;
+    --font-pargraph:12px;
+}
+body{
+    background-color: var(--secondary-color-bg);
+    color: var(--primary-color-text);
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-family);
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ p,h2{
+    margin: 0;
+    padding: 0;
+ }
+ .text p{
+    margin: 0;
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    display: grid;
+    grid-template-columns: 100px 1fr 2fr 150px;
+    grid-template-areas: "logo name nav button";
+    align-items: center;
+    padding: 0 60px;
+}
+.fon{
+    font-family: var(--font-family-index);
+    font-size: 30px;
+}
+.text--light{
+    font-size: 35px;
+    font-weight: 600;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px 0px;
+}
+.text--bold{
+    font-size: 35px;
+    font-weight: 800;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10px 0px;
+}
+.nav__list{
+    list-style: none;
+    display:flex ;
+}
+.header__link{
+    font-size: 35px;
+    font-weight: bold;
+    grid-area: name;
+}
+.nav{
+    display: inline-block;
+    justify-self: start;
+}
+.nav__list-item{
+    margin-inline-end: 36px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.button,.submit{
+    grid-area: button;
+    margin-inline-end: 5px;
+    background-color: var(--primary-color-text);
+    color: var(--secondary-color-bg);
+    font-size: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border-radius: 5px;
+    padding: 4px;
+}
+.small{
+    font-size: var(--font-pargraph);
+    line-height: 1.5;
+    color: var(--Nutral);
+}
+.contrast{
+    color: var(--secondary-color-bg);
+    line-height: 1.5;
+    font-size: var(--font-pargraph);
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: 50px 1fr ;
+    grid-template-areas: "logo name p p";
+    align-items: center;
+    padding: 0 60px;
+    background-color: var(--primary-color-text);
+    color: var(--secondary-color-bg);   
+}
