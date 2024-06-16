@@ -1,3 +1,6 @@
+document.addEventListener("DOMContentLoaded",()=>{
+
+
 const contactForm = document.querySelector(".contact-form");
 let name = document.getElementById("name");
 let email = document.getElementById("email");
@@ -26,4 +29,5 @@ contactForm.addEventListener("submit", (e) => {
     alert("something went wrong");
   };
   xhr.send(JSON.stringify(formData));
+});
 });
