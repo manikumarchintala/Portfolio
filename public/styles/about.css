@@ -1,0 +1,35 @@
+@import url(./base.css);
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "text image";
+    grid-column-gap: 30px;
+    padding:5px 60px;
+}
+.main--text{
+    grid-area: text;
+    vertical-align: middle;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    flex-direction: column;
+}
+.main--image{
+    grid-area: image;
+    object-fit: contain;
+}
+@media (max-width:870px){
+    .main , .Aboutme {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas: "image"
+                              "text";
+        grid-column-gap: 30px;
+        padding:5px 10px;
+    }
+    .footer{
+        padding: 0 10px;
+    }
+}
