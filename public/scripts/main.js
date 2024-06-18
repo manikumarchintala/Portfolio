@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   email.addEventListener("input", () => {
     const isValidEmail = validateEmail(email.value);
-  });
+  })
 
   contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
