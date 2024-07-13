@@ -1,4 +1,4 @@
-# portifolio
+# Portfolio
 
 This project demonstrates a simple webpage developed from a Figma design. The project showcases the use of modern web development practices, including frontend development, backend integration, server deployment, and automated version control.
 
