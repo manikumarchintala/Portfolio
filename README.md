@@ -11,6 +11,7 @@ CSS: For styling and layout.
 JavaScript: For interactivity and client-side validation.
 Features
 Contact Form: A user-friendly contact form with client-side validation to ensure all fields are filled before submission.
+<br/>
 #Backend
 Technologies Used
 Nodemailer: For handling email functionality.
