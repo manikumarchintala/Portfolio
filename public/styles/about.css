@@ -23,6 +23,9 @@
     object-fit: contain;
 }
 @media (max-width:870px){
+    .header{
+        grid-template-columns: 1fr 1fr 33px;
+    }
     .main , .Aboutme {
         display: grid;
         grid-template-columns: 1fr;
