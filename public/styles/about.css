@@ -1,4 +1,7 @@
 @import url(./base.css);
+.header{
+    grid-template-columns:  5fr 0.5fr 150px;
+}
 .main {
     display: grid;
     grid-template-columns: 1fr 1fr;

@@ -29,39 +29,31 @@ document.addEventListener("DOMContentLoaded", () => {
   let email = document.getElementById("email");
   let subject = document.getElementById("subject");
   let message = document.getElementById("message");
-  let warningEmail = document.querySelector(".warning--email");
-  let tem = email.value;
-  function validateEmail(tem) {
-    let validRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
-    return validRegex.test(tem);
-  }
-
-  email.addEventListener("input", () => {
-    const isValidEmail = validateEmail(email.value);
-  });
-
-  contactForm.addEventListener("submit", (e) => {
+  contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     if (name.value && email.value && subject.value && message.value) {
-      let formData = {
+      const formData = {
         name: name.value,
         email: email.value,
         subject: subject.value,
         message: message.value,
       };
-      let xhr = new XMLHttpRequest();
-      xhr.open("POST", "/");
-      xhr.setRequestHeader("content-type", "application/json");
-      xhr.onload = function () {
-        console.log(xhr.responseText);
-        if (xhr.responseText == "sucess") {
+      try {
+        const response = await fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+        const result = await response.text();
+        if (result === "success") {
           name.value = "";
           email.value = "";
           subject.value = "";
           message.value = "";
         }
-      };
-      xhr.send(JSON.stringify(formData));
+      } catch (error) {
+        console.error("Error:", error);
+      }
     }
   });
 });

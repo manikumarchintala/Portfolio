@@ -1,14 +1,10 @@
 const express = require("express");
-const server = require("http");
 require("dotenv").config();
 const app = express();
 const nodemailer = require("nodemailer");
-
 const PORT = process.env.PORT || 6500;
-
 app.use(express.static("public"));
 app.use(express.json());
-
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
 });
