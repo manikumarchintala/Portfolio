@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const menu = document.querySelector(".menu");
   const close = document.querySelector(".close");
   const body = document.querySelector(".body");
+
   menu.addEventListener("click", () => {
     nav.classList.add("nav--visible");
     menu.classList.add("menu--hide");
@@ -15,6 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
     menu.classList.remove("menu--hide");
     close.classList.remove("close--show");
     body.classList.remove("body--no-scroll");
+  });
+  nav.addEventListener("click", () => {
+    body.classList.remove("body--no-scroll");
+    menu.classList.remove("menu--hide");
+    close.classList.remove("close--show");
+    nav.classList.remove("nav--visible");
   });
   //for contact form
   const contactForm = document.querySelector(".contact-form");
@@ -31,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   email.addEventListener("input", () => {
     const isValidEmail = validateEmail(email.value);
-  })
+  });
 
   contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
