@@ -130,7 +130,7 @@ textarea{
 }
 @media (max-width:870px){
   
-    .main , .Aboutme ,.projects,.ContactMe{
+    .main , .Aboutme ,.projects,.ContactMe,.projects:nth-of-type(2n),.Aboutme{
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2,1fr);
@@ -158,13 +158,11 @@ textarea{
         display: block;
         max-width: 100%;
     }
-    .project--image{
-        /* padding-top: 40px; */
-    }
     .contact-form{
         margin-top: 30px;
         padding: 0 10px;
     }
+    
     .submit{
         width: 40%;
     }
