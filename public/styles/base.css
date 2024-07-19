@@ -97,6 +97,9 @@ a{
     background-color: var(--primary-color-text);
     color: var(--secondary-color-bg);   
 }
+img{
+    max-width: 100%;
+}
 /* hamburger */
 .menu{
     display: none;
