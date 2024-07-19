@@ -21,13 +21,15 @@
     object-fit: contain;
     order: 1;
 }
-
 .MySkills,.Myprojects {
  display: flex;
  flex-direction: column;
  justify-content: center;
  align-items: center;
  padding: 5px 60px;
+}
+.projects:nth-of-type(2n),.Aboutme{
+    grid-template-areas: "image text";
 }
 img{
     display: block;
@@ -157,7 +159,6 @@ textarea{
         max-width: 100%;
     }
     .project--image{
-        display: block;
         padding-top: 40px;
     }
     .contact-form{

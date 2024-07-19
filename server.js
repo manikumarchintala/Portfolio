@@ -1,3 +1,4 @@
+const fs = require("fs");
 const express = require("express");
 require("dotenv").config();
 const app = express();
@@ -5,9 +6,35 @@ const nodemailer = require("nodemailer");
 const PORT = process.env.PORT || 6500;
 app.use(express.static("public"));
 app.use(express.json());
+
+let visitorCount = 0;
+fs.readFile("visitorCount.txt", "utf8", (err, data) => {
+  if (err) {
+    console.log("Error reading visitor count file:", err);
+  } else {
+    visitorCount = parseInt(data) || 0;
+    console.log(`Initial visitor count: ${visitorCount}`);
+  }
+});
+app.use((req, res, next) => {
+  visitorCount++;
+  fs.writeFile("visitorCount.txt", visitorCount.toString(), (err) => {
+    if (err) {
+      console.log("Error writing visitor count file:", err);
+    }
+  });
+  console.log(`Visitor count: ${visitorCount}`);
+  next();
+});
+
+app.get("/visitor-count", (req, res) => {
+  res.json({ visitorCount });
+});
+
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
 });
+//posting to the gmail server.
 app.post("/", (req, res) => {
   console.log(req.body);
   const transporter = nodemailer.createTransport({
@@ -36,6 +63,7 @@ app.post("/", (req, res) => {
     }
   });
 });
+//listening port
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
