@@ -159,7 +159,7 @@ textarea{
         max-width: 100%;
     }
     .project--image{
-        padding-top: 40px;
+        /* padding-top: 40px; */
     }
     .contact-form{
         margin-top: 30px;
