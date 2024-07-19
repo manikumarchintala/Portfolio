@@ -1,5 +1,5 @@
 # Portfolio
-
+<img width="1437" alt="Screenshot 2024-07-19 at 3 22 56 PM" src="https://github.com/user-attachments/assets/9652c1b5-ef2c-4d9d-8e83-880fa84e1bd1">
 This project demonstrates a simple webpage developed from a Figma design. The project showcases the use of modern web development practices, including frontend development, backend integration, server deployment, and automated version control.
 
 # Frontend
@@ -11,6 +11,9 @@ Features
 Contact Form: A user-friendly contact form with client-side validation to ensure all fields are filled before submission.
 <br/>
 # Backend
+<img width="1437" alt="Screenshot 2024-07-19 at 3 22 28 PM" src="https://github.com/user-attachments/assets/3f6bd426-dd54-429b-b89a-943928c28769">
+
+
 Technologies Used
 Nodemailer: For handling email functionality.
 Features
