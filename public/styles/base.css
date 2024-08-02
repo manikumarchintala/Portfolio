@@ -6,6 +6,9 @@
     --Nutral:#404040;
     --font-pargraph:12px;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: var(--secondary-color-bg);
     color: var(--primary-color-text);
