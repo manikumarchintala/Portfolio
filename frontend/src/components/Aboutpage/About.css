@@ -1,0 +1,40 @@
+@import url(../../App.css);
+.topabout{
+    display: flex;
+    gap: 2rem;
+    padding: 6rem 8rem;
+    background-color: #F9E6F0;
+}
+.bottomabout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 9rem;
+    background-color: white;
+}
+.inner{
+    padding: 2rem 2rem;
+    width: 40rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.darkgreen{
+    background-color: var(--color-green);
+}
+.imageset{
+  border: 1px solid black;
+}
+.textset,.textbio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+}
+.biotext{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}

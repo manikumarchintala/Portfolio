@@ -1,0 +1,10 @@
+@import url(../../App.css);
+.landing,.landingtext{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .landing{
+    gap: var(--gapper-flex);
+    padding: var(--padding-flex);
+  }

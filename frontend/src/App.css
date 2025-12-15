@@ -1,0 +1,123 @@
+:root{
+  --margin-var:2px solid black;
+  --baseline:4rem;
+  --primary-font : "Quicksand", sans-serif;
+  --button-style: 1px 12px 12px 12px ;
+  --gapper-flex:3rem;
+  --padding-flex:5rem 3rem 1rem 3rem;
+  --color-blue:#9ddcff;
+  --color-green:#009394;
+  --color-yellow:#ffe68c;
+  --color-pink:#ffc9f0;
+  --dark-bg-color:#eeeeee;
+}
+html,p,h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body{
+  margin:0rem 5rem 0rem 9rem;
+  padding: 0px;
+  font-family: var(--primary-font);
+  border-left:var(--margin-var);
+  background-repeat: repeat;
+  color: black;
+}
+body.light{
+  background-color: white;
+  background-image: url("/src/assets/dotted.svg");
+}
+body.dark{
+  background-color:var(--dark-bg-color); 
+  color: black;
+}
+body.dark input{
+  background-color:var(--dark-bg-color);
+}
+body.dark .topabout{
+  background-color:  #acc6aa;
+}
+body.dark .bottomabout{
+  background-color: rgb(174, 174, 174);
+}
+img{
+  max-width: 100%;
+  display: block;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+a:hover,
+a.active{
+  color: black;
+  text-decoration: underline;
+  cursor: pointer;
+} 
+.gapper{
+  height: var(--baseline);
+}
+.doublegapper{
+  height: calc(var(--baseline)*2);
+}
+
+@media(max-width:1000px){
+  body{
+    margin:0rem 1rem 0rem 3rem;
+  }
+  .topmost{
+    gap: 0.8rem;
+  }
+  .child{
+    padding: 2rem 0rem 1rem 0rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .topmost{
+    grid-template-columns:  1fr repeat(3,0.3fr);
+  }
+  .landing,.landingtext,.experience,.contactform,.projects,.topabout{
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
+  .imageset{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  .projectsgrid{
+    grid-template-columns: 1fr;
+  }
+  .formlabelholder,.inputss,.projectlabel,.labelholder{
+    padding: 1rem;
+  }
+  .bottomabout{
+    padding: 1rem;
+  }
+  .one, .three, .seven, .nine {
+    width: 1rem;
+    height: 2rem;
+  }
+  .flexb{
+    padding: 0.5rem 1rem;
+  }
+  }
+@media(max-width:600px){
+.topmost{
+  grid-template-columns:  1fr 1fr repeat(2,0.3fr);
+}
+.inputss{
+  padding:0;
+}
+input{
+  width:9rem;
+}
+.middle{
+  width: 8rem;
+}
+.footergrid{
+  gap: 1rem;
+}
+}

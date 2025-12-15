@@ -1,0 +1,14 @@
+@import url(../../App.css);
+  .topmost{
+    font-size: 1.2rem;
+    display: grid;
+    grid-template-columns: 1fr   repeat(3,0.2fr);
+    height: calc(var(--baseline));
+  }
+  .child{
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content:flex-start;
+    align-items:baseline;
+  }

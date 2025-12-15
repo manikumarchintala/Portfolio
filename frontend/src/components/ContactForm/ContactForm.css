@@ -1,0 +1,54 @@
+@import url(../../App.css);
+.contactform{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gapper-flex);
+    padding: var(--padding-flex);
+}
+.inputval{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid black;
+}
+.formflex{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.3rem;
+}
+.formlabelholder{
+    padding: 3rem;
+}
+.inputss{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem;
+    gap: 2rem;
+}
+input{
+    border: 0px;
+    border-bottom: 1px solid black;
+    outline: none;
+    height: 1.3rem;
+    width: 20rem;
+    background-image: inherit;
+}
+.middle{
+    width: 19rem;
+}
+button{
+    height: 30px;
+    width: 100px;
+    color: white;
+    background-color: black;
+    border: none;
+}
+.buttonflex{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}

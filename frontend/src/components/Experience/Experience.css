@@ -1,0 +1,71 @@
+  @import url("../../App.css");
+  .experience {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--secondary-font);
+    gap:var(--gapper-flex);
+    padding: var(--padding-flex);
+}
+.labelholder {
+    padding:3rem ;
+}
+.experiencegrid {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr auto 1fr;
+    grid-template-areas:
+        "one two three"
+        "four flexb five"
+        "seven eight nine";
+}
+.one, .three, .seven, .nine {
+    width: 3.5rem;
+    height: 3.5rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flexb {
+    grid-area: flexb;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 45px;
+    border: var(--margin-var);
+    gap: 20px;
+    align-self: stretch;
+    justify-self: stretch;
+}
+.innerflex {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    gap: 20px;
+}
+.imageflex {
+    display: block;
+    background-position: center;
+}
+.one{
+  grid-area: one;
+}
+.two,.eight{
+  border-left: var(--margin-var);
+  border-right: var(--margin-var);
+}
+.three{
+  grid-area: three;
+}
+.four,.six{
+  border-top: var(--margin-var);
+  border-bottom:var(--margin-var);
+
+}
+.seven{
+  grid-area: seven;
+}
+.nine {
+  grid-area: nine;
+}
+

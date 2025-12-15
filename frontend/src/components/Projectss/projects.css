@@ -1,0 +1,43 @@
+@import url(../../App.css);
+.projects{
+display: flex;
+align-items: center;
+justify-content: space-around;
+gap: var(--gapper-flex);
+padding: var(--padding-flex);
+}
+.projectlabel{
+    padding: 3rem;
+}
+.projectsgrid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+.childgrid{
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 0.6rem;
+}
+.gridtextflex{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.green{
+    background-color: var(--color-green);
+    border-radius: var(--button-style);
+}
+.yellow{
+    background-color: var(--color-yellow);
+    border-radius: var(--button-style);
+}
+.blue{
+    background-color: var(--color-blue);
+    border-radius:var(--button-style);
+}
+.pink{
+    background-color: var(--color-pink);
+    border-radius: var(--button-style)
+}
